@@ -1,5 +1,6 @@
-body{
-    font-family: 'poppins', sans-serif;
+/* Main CSS */
+body {
+    font-family: 'Poppins', sans-serif;
     background-color: #8c53ff;
     margin: 0;
     display: flex;
@@ -8,7 +9,7 @@ body{
     min-height: 100vh;
 }
 
-#container{
+#container {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
@@ -23,7 +24,7 @@ body{
     overflow-y: scroll;
 }
 
-#list-header{
+#list-header {
     display: flex;
     align-items: left;
     justify-content: left;
@@ -40,7 +41,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #addNoteDiv {
@@ -50,6 +50,7 @@ body{
     border-radius: 8px;
     height: 200px;
     width: 200px;
+    margin: 10px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -59,20 +60,23 @@ body{
 #addNoteDiv:hover {
     transition: 0.25s;
     background-color: #f1f1f1;
-
 }
+
+
 #addNoteDiv i {
     font-size: 70px;
     color: gainsboro;
 }
 
-/* List css */
+
+/* List CSS */
 #list-container {
     display: flex;
     align-items: left;
     justify-content: left;
 }
-ul{
+
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -81,54 +85,62 @@ ul{
     text-align: center;
 }
 
-li{
+li {
     background-color: #fff385;
     margin: 5px 0;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 8px; /* Rounded corners */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Added to align buttons to the right */
     height: 200px;
     width: 200px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 9px 9px 18px #b3b3b3,-9px -9px 18px #ffffff;
-
+    box-shadow:  9px 9px 18px #b3b3b3,
+             -9px -9px 18px #ffffff;
 }
 
 li span{
     font-size: 12px;
-    flex-grow: 1;
+    flex-grow:1;
     word-wrap: break-word;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
-#editBtn, #deleteBtn {
+li span:hover{
+    overflow-y:auto;
+}
+
+
+#editBtn,
+#deleteBtn {
     background-color: #c6aaff;
     color: #fff;
     border: none;
     padding: 5px 10px;
-    margin: 0 5px;
+    margin: 0 5px; /* Adjusted margin for spacing */
     cursor: pointer;
     border-radius: 4px;
     font-size: 12px;
     width: 60px;
 }
 
-#editBtn{
+#editBtn {
     background-color: gainsboro;
 }
 
-#deletBtn:hover {
+#deleteBtn:hover {
     background-color: #8c53ff;
 }
+
 #editBtn:hover {
     background-color: gray;
 }
 
-/* Create Note popup css */
+
+/* Create Note Popup CSS */
 #popupContainer {
     position: absolute;
     top: 50%;
@@ -173,11 +185,13 @@ textarea {
     cursor: pointer;
     margin: 10px;
 }
-#closeBtn{
+
+#closeBtn {
     background-color: gainsboro;
 }
 
-/* Editing Popup css */
+
+/* Editing Popup CSS */
 #editing-container {
     position: absolute;
     top: 50%;
@@ -212,4 +226,3 @@ textarea {
 #closeBtn {
     background-color: gainsboro;
 }
-
